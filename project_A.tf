@@ -12,9 +12,9 @@ resource "tfe_workspace" "application_a_vnet" {
   project_id   = data.tfe_outputs.outputs.values.Project_A_Id
 }
 
-resource "tfe_workspace" "application_a_web" {
-  name         = "Application_A_Web"
-  organization = var.orgName
-  tag_names    = ["application_a_web"]
-  project_id   = data.tfe_outputs.outputs.values.Project_A_Id
-}
+# resource "tfe_workspace" "application_a_web" {
+#   name         = "Application_A_Web"
+#   organization = var.orgName
+#   tag_names    = ["application_a_web"]
+#   project_id   = data.tfe_outputs.outputs.values.Project_A_Id
+# }
