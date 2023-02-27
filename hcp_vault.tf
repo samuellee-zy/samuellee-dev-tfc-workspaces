@@ -1,6 +1,6 @@
 
 resource "tfe_workspace" "hcp-vault-deployment" {
-  name                = "HCP Vault Deployment"
+  name                = "hcp-vault-deployment"
   organization        = data.tfe_outputs.samuellee-dev-project-outputs.values.project_hcp_vault.organization
   tag_names           = ["hcp", "vault", "deployment"]
   description         = "HCP Vault Cluster Deployment"

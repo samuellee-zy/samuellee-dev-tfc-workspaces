@@ -1,5 +1,5 @@
 resource "tfe_workspace" "hcp-packer-deployment" {
-  name                = "HCP Packer Deployment"
+  name                = "hcp-packer-deployment"
   organization        = data.tfe_outputs.samuellee-dev-project-outputs.values.project_hcp_packer.organization
   tag_names           = ["hcp", "packer", "deployment"]
   description         = "HCP Packer Deployment"

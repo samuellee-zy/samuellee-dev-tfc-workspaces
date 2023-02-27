@@ -1,5 +1,5 @@
 resource "tfe_workspace" "hcp-waypoint-deployment" {
-  name                = "HCP Waypoint Deployment"
+  name                = "hcp-waypoint-deployment"
   organization        = data.tfe_outputs.samuellee-dev-project-outputs.values.project_hcp_waypoint.organization
   tag_names           = ["hcp", "waypoint", "deployment"]
   description         = "HCP Waypoint Deployment"
