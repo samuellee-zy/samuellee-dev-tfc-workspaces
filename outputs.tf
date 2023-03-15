@@ -18,6 +18,10 @@ output "hcp_packer_deployment_id" {
   value = tfe_workspace.hcp-packer-deployment.id
 }
 
+output "ansarada_demo_ecs_id" {
+  value = tfe_workspace.ansarada.id
+}
+
 # output "application_a_web_workspace_id" {
 #   value = tfe_workspace.application_a_web.id
 # }
