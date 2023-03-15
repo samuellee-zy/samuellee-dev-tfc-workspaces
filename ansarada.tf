@@ -1,11 +1,16 @@
-resource "tfe_oauth_client" "samuelleezy" {
-  name             = "samuelleezy-oauth-client"
-  organization     = var.orgName
-  api_url          = "https://api.github.com"
-  http_url         = "https://github.com"
-  oauth_token      = var.GITHUB_TOKEN
-  service_provider = "github"
+data "tfe_oauth_client" "samuellee-dev-tfc-github-client" {
+  organization = var.orgName
+  name         = "Sam Github.com"
 }
+
+# resource "tfe_oauth_client" "samuelleezy" {
+#   name             = "samuelleezy-oauth-client"
+#   organization     = var.orgName
+#   api_url          = "https://api.github.com"
+#   http_url         = "https://github.com"
+#   oauth_token      = var.GITHUB_TOKEN
+#   service_provider = "github"
+# }
 
 resource "tfe_workspace" "ansarada" {
   name                = "ansarada-ecs-demo"
@@ -19,6 +24,6 @@ resource "tfe_workspace" "ansarada" {
     identifier         = "samuellee-zy/customer-ansarada"
     branch             = "main"
     ingress_submodules = false
-    oauth_token_id     = tfe_oauth_client.samuelleezy.oauth_token_id
+    oauth_token_id     = data.tfe_oauth_client.samuellee-dev-tfc-github-client.values.id
   }
 }
