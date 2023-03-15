@@ -1,6 +1,6 @@
 data "tfe_oauth_client" "samuellee-dev-tfc-github-client" {
   organization = var.orgName
-  name         = "Sam Github.com"
+  name         = "samuellee-zy-github-oauth"
 }
 
 # resource "tfe_oauth_client" "samuelleezy" {
