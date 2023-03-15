@@ -24,6 +24,6 @@ resource "tfe_workspace" "ansarada" {
     identifier         = "samuellee-zy/customer-ansarada"
     branch             = "main"
     ingress_submodules = false
-    oauth_token_id     = data.tfe_oauth_client.samuellee-dev-tfc-github-client.id
+    oauth_token_id     = data.tfe_oauth_client.samuellee-dev-tfc-github-client.oauth_token_id
   }
 }
