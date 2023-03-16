@@ -4,7 +4,7 @@ resource "tfe_workspace" "esri-ws" {
   tag_names           = ["aws", "customer"]
   description         = "Esri Demo Deployment"
   execution_mode      = "remote"
-  assessments_enabled = true
+  assessments_enabled = false
   auto_apply          = true
   project_id          = data.tfe_outputs.samuellee-dev-project-outputs.values.project_customer_demos.id
   vcs_repo {
