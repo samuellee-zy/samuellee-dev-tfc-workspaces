@@ -1,7 +1,7 @@
 resource "tfe_workspace" "esri-ws" {
   name                = "esri-demo"
   organization        = var.orgName
-  tag_names           = ["aws", "customer"]
+  tag_names           = ["aws", "customer", "sentinel"]
   description         = "Esri Demo Deployment"
   execution_mode      = "remote"
   assessments_enabled = false

@@ -11,7 +11,7 @@
 resource "tfe_workspace" "ansarada-ws" {
   name                = "ansarada-ecs-demo"
   organization        = data.tfe_outputs.samuellee-dev-project-outputs.values.project_hcp_boundary.organization
-  tag_names           = ["aws", "customer"]
+  tag_names           = ["aws", "customer", "sentinel"]
   description         = "Ansarada Demo ECS Deployment"
   execution_mode      = "remote"
   assessments_enabled = true
