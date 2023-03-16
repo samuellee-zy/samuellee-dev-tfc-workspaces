@@ -5,6 +5,7 @@ resource "tfe_workspace" "esri-ws" {
   description         = "Esri Demo Deployment"
   execution_mode      = "remote"
   assessments_enabled = true
+  auto_apply          = true
   project_id          = data.tfe_outputs.samuellee-dev-project-outputs.values.project_customer_demos.id
   vcs_repo {
     identifier         = "samuellee-zy/customer-esri"
