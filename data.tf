@@ -12,3 +12,8 @@ data "tfe_oauth_client" "samuellee-dev-tfc-github-client" {
   organization = var.orgName
   name         = "samuellee-zy-github-oauth"
 }
+
+data "tfe_variable_set" "hcp-org-client-id-client-secret" {
+  name         = "samuellee-dev HCP Client ID and Client Secret"
+  organization = var.orgName
+}
