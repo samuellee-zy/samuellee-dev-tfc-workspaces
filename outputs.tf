@@ -31,5 +31,5 @@
 # }
 
 output "hcpv_plus_controlGroupDemo" {
-  value = tfe_workspace.hcpv_plus_controlGroupDemo.id
+  value = tfe_workspace.hcpv-plus-controlGroupDemo.id
 }
