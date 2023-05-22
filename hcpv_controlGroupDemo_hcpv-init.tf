@@ -1,4 +1,4 @@
-resource "tfe_workspace" "hcp-vault-deployment" {
+resource "tfe_workspace" "hcpv-plus-controlGroupDemo" {
   name                = "hcpv-plus-controlGroupDemo"
   organization        = var.orgName
   tag_names           = ["hcp", "vault", "deployment"]
