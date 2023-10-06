@@ -8,6 +8,10 @@ resource "tfe_workspace" "serviceNow" {
   project_id          = data.tfe_outputs.samuellee-dev-project-outputs.values.project_Demos.id
 }
 
+resource "tfe_workspace_variable_set" "serviceNow-varSet" {
+  workspace_id = tfe_workspace.serviceNow.id
+  variable_set_id = data.tfe_outputs.samuellee-dev-tfc-dynamic-creds-varset-outputs.id
+}
 
 
 
