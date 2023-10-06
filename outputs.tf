@@ -30,6 +30,6 @@
 #   value = tfe_workspace.application_a_web.id
 # }
 
-output "hcpv_plus_controlGroupDemo" {
-  value = tfe_workspace.hcpv-plus-controlGroupDemo.id
-}
+# output "hcpv_plus_controlGroupDemo" {
+#   value = tfe_workspace.hcpv-plus-controlGroupDemo.id
+# }
