@@ -1,3 +1,17 @@
+resource "tfe_workspace" "serviceNow" {
+  name                = "serviceNow"
+  organization        = var.orgName
+  tag_names           = ["aws", "servicenow"]
+  description         = "ServiceNow Workspace for deployments"
+  execution_mode      = "remote"
+  assessments_enabled = true
+  project_id          = data.tfe_outputs.samuellee-dev-project-outputs.values.project_Demos.id
+}
+
+
+
+
+
 # resource "tfe_workspace" "hcpv-plus-controlGroupDemo" {
 #   name                = "hcpv-plus-controlGroupDemo"
 #   organization        = var.orgName

@@ -3,7 +3,7 @@ terraform {
     organization = "samuellee-dev"
 
     workspaces {
-      name = "samuellee-dev-tfc-workspaces"
+      name = "serviceNow"
     }
   }
   required_providers {
