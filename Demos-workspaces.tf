@@ -1,5 +1,5 @@
 resource "tfe_workspace" "cicdDemo" {
-  name                = "TFC-cicd-demo"
+  name                = "tfc-cicd-demo"
   organization        = var.orgName
   tag_names           = ["aws", "api", "cicd"]
   description         = "CICD - API Driven Workflow Demo"
