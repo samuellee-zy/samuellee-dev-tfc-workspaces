@@ -1,7 +1,7 @@
 resource "tfe_workspace" "apiDrivenWorkflow" {
   name                = "API-Driven-Workflow"
   organization        = var.orgName
-  tag_names           = ["aws", "api workflow"]
+  tag_names           = ["aws", "api"]
   description         = "API Driven Workflow Demo"
   execution_mode      = "remote"
   assessments_enabled = true
