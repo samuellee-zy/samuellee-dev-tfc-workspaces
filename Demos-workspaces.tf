@@ -17,6 +17,7 @@ resource "tfe_workspace_run_task" "cicdDemo-run-task" {
   workspace_id      = tfe_workspace.cicdDemo.id
   task_id           = data.tfe_organization_run_task.infracost.id
   enforcement_level = "advisory"
+  stage             = "post_plan"
 }
 
 
