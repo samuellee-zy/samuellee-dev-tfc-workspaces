@@ -22,3 +22,8 @@ data "tfe_organization_run_task" "infracost" {
   name         = "Infracost"
   organization = var.orgName
 }
+
+data "tfe_policy_set" "infracost" {
+  name = "sentinel-infracost-module"
+  organization = var.orgName
+}

@@ -20,7 +20,10 @@ resource "tfe_workspace_run_task" "cicdDemo-run-task" {
   stage             = "post_plan"
 }
 
-
+resource "tfe_workspace_policy_set" "infracost" {
+  policy_set_id = data.tfe_policy_set.infracost.id
+  workspace_id = tfe_workspace.cicdDemo.id
+}
 
 # resource "tfe_workspace" "hcpv-plus-controlGroupDemo" {
 #   name                = "hcpv-plus-controlGroupDemo"
