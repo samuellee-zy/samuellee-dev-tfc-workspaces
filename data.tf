@@ -17,3 +17,8 @@ data "tfe_variable_set" "hcp-org-client-id-client-secret" {
   name         = "samuellee-dev HCP Client ID and Client Secret"
   organization = var.orgName
 }
+
+data "tfe_organization_run_task" "infracost" {
+  name         = "Infracost"
+  organization = var.orgName
+}
