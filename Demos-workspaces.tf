@@ -1,15 +1,15 @@
-resource "tfe_workspace" "apiDrivenWorkflow" {
-  name                = "API-Driven-Workflow"
+resource "tfe_workspace" "cicdDemo" {
+  name                = "TFC-cicd-demo"
   organization        = var.orgName
-  tag_names           = ["aws", "api"]
-  description         = "API Driven Workflow Demo"
+  tag_names           = ["aws", "api", "cicd"]
+  description         = "CICD - API Driven Workflow Demo"
   execution_mode      = "remote"
   assessments_enabled = true
   project_id          = data.tfe_outputs.samuellee-dev-project-outputs.values.project_Demos.id
 }
 
 resource "tfe_workspace_variable_set" "apiDrivenWorkflow-aws-dynamic-creds-varset" {
-  workspace_id    = tfe_workspace.apiDrivenWorkflow.id
+  workspace_id    = tfe_workspace.cicdDemo.id
   variable_set_id = data.tfe_outputs.samuellee-dev-tfc-dynamic-creds-varset-outputs.values.dynamic_creds_varset_id
 }
 
